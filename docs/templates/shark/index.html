@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YINGJUE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      /* 自定义动画：隐藏时高度为 0，展开时给个大 max-height */
+      .menu-transition {
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <nav id="header" class="fixed w-full z-10 top-0">
+    <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+    <div class="w-full md:max-w-4xl mx-auto flex items-center justify-between mt-0 py-1">
+      <div class="pl-4">
+        <a class="flex items-center gap-2 text-gray-900 no-underline hover:no-underline font-extrabold text-xl" href="/">
+          <img src="../../images/logo-yingjue.png" alt="logo" class="h-8 w-8 object-contain" />
+          <span class="hidden md:block">YINGJUE</span>
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle" class="flex items-center px-2 py-2 text-gray-500 hover:text-green-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-6 w-6">
+            <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="nav-content" class="menu-transition max-h-0 md:max-h-none flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-3 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent ps-8 md:ps-0 z-10">
+        <a class="block text-gray-600 no-underline hover:text-gray-900 p-1 hover:border border-gray-400" href="#">Archives</a>
+        <a class="block text-gray-600 no-underline hover:text-gray-900 p-1 hover:border border-gray-400" href="#">Categories</a>
+        <a class="block text-gray-600 no-underline hover:text-gray-900 p-1 hover:border border-gray-400" href="#">Tags</a>
+        <a class="block text-gray-600 no-underline hover:text-gray-900 p-1 hover:border border-gray-400" href="#">Authors</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container w-full md:max-w-4xl mx-auto pt-20">
+    <hr class="border-b-2 border-gray-400 mb-8 mx-4">
+    <div class="font-sans flex justify-between content-center gap-2 px-4 pb-12">
+			<div class="text-left">
+				<span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
+				<p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Using IDAPython to Make Your Life Easier: Part 1 - Setup Environment</a></p>
+			</div>
+			<div class="text-right">
+				<span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
+				<p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Using IDAPython to Make Your Life Easier: Part 1 - Setup Environment</a></p>
+			</div>
+		</div>
+  </div>
+  <footer class="border-t border-gray-400">
+    <div class="flex flex-wrap md:max-w-4xl mx-auto py-2">
+      <div class="w-full md:w-1/2 py-4 px-4">
+        <h3 class="font-bold text-gray-900">Recent Articles</h3>
+        <ul class="list-reset text-base pt-3">
+          <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://forkliu.com">Learn PHP: keywords such as declare,use,require</a></li>
+          <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://loveai.info">Learn Slim Skeleton</a></li>
+          <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://tatamobile.net">Unicorn使用笔记（一）：安装</a></li>
+          <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://loveai.info">禁止Spotlight对外部磁盘建立索引</a></li>
+          <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://loveai.info">Using IDAPython to Make Your Life Easier: Part 1 - Setup Environment</a></li>
+        </ul>
+      </div>
+      <div class="flex w-full md:w-1/2 py-4">
+        <div class="w-1/2 py-0 px-4">
+          <h3 class="font-bold text-gray-900">Categories</h3>
+          <ul class="list-reset pt-3">
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://forkliu.com">Android</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://loveai.info">iOS</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://tatamobile.net">Misc</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://tatamobile.net">Reverse Engineering</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://tatamobile.net">Web</a></li>
+          </ul>
+        </div>
+        <div class="w-1/2 py-0 px-4">
+          <h3 class="font-bold text-gray-900">Links</h3>
+          <ul class="list-reset pt-3">
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://forkliu.com">FORKLIU's BLOG</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://loveai.info">LOVEAI.INFO</a></li>
+            <li><a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1" href="https://tatamobile.net">TATA's BLOG</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:max-w-4xl mx-auto py-2 border-t border-gray-400">
+      <p class="text-base text-gray-950 text-center">&copy; 2025 YINGJUE</p>
+    </div>
+  </footer>
+  <script>
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var h = document.documentElement,
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight',
+      progress = document.querySelector('#progress'),
+      scroll;
+    document.addEventListener('scroll', function() {
+
+      /*Refresh scroll % width*/
+      scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+      progress.style.setProperty('--scroll', scroll + '%');
+
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+
+      }
+
+    });
+
+    let isOpen = false;
+    //Javascript to toggle the menu
+    document.getElementById('nav-toggle').onclick = function() {
+      // document.getElementById("nav-content").classList.toggle("hidden");
+      // const navMenu = document.getElementById('nav-menu');
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        navcontent.classList.remove('max-h-0');
+        navcontent.classList.add('max-h-96'); // Enough for ~6项导航
+      } else {
+        navcontent.classList.remove('max-h-96');
+        navcontent.classList.add('max-h-0');
+      }
+    }
+  </script>
+</body>
+</html>
