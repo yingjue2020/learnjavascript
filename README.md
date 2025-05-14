@@ -22,3 +22,10 @@ Learn JavaScript
 
 ## Interview Coder
 - UI库，支持React和Vue :https://headlessui.com/
+
+
+- https://merakiui.com/components 优先
+- https://daisyui.com 有自己的类名
+- https://www.hyperui.dev  优先
+- https://flyonui.com/components/ 有自己的类名，且不提供CDN支持
+- https://demos.creative-tim.com/soft-ui-design-system/sections/navigation/navbars.html  boostrap5
