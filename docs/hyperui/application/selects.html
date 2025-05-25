@@ -12,7 +12,188 @@
 
   </nav>
   <main class="container w-full md:max-w-4xl mx-auto my-4 font-sans border">
-    
+<div>
+  <label for="Headline">
+    <span class="text-sm font-medium text-gray-700"> Headliner </span>
+
+    <select
+      name="Headline"
+      id="Headline"
+      class="mt-0.5 w-full rounded border-gray-300 shadow-sm sm:text-sm"
+    >
+      <option value="">Please select</option>
+      <option value="JM">John Mayer</option>
+      <option value="SRV">Stevie Ray Vaughn</option>
+      <option value="JH">Jimi Hendrix</option>
+      <option value="BBK">B.B King</option>
+      <option value="AK">Albert King</option>
+      <option value="BG">Buddy Guy</option>
+      <option value="EC">Eric Clapton</option>
+    </select>
+  </label>
+</div>
+<div>
+  <label for="Headline">
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-200"> Headliner </span>
+
+    <select
+      name="Headline"
+      id="Headline"
+      class="mt-0.5 w-full rounded border-gray-300 shadow-sm sm:text-sm dark:border-gray-600 dark:bg-gray-900 dark:text-white"
+    >
+      <option value="">Please select</option>
+      <option value="JM">John Mayer</option>
+      <option value="SRV">Stevie Ray Vaughn</option>
+      <option value="JH">Jimi Hendrix</option>
+      <option value="BBK">B.B King</option>
+      <option value="AK">Albert King</option>
+      <option value="BG">Buddy Guy</option>
+      <option value="EC">Eric Clapton</option>
+    </select>
+  </label>
+</div>
+<div>
+  <label for="Headline" class="block text-sm font-medium text-gray-900"> Headliner </label>
+
+  <select
+    name="Headline"
+    id="Headline"
+    class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+  >
+    <option value="">Please select</option>
+
+    <optgroup label="A">
+      <option value="AK">Albert King</option>
+    </optgroup>
+
+    <optgroup label="B">
+      <option value="BBK">B.B King</option>
+      <option value="BG">Buddy Guy</option>
+    </optgroup>
+
+    <optgroup label="E">
+      <option value="EC">Eric Clapton</option>
+    </optgroup>
+
+    <optgroup label="J">
+      <option value="JM">John Mayer</option>
+      <option value="JH">Jimi Hendrix</option>
+    </optgroup>
+
+    <optgroup label="S">
+      <option value="SRV">Stevie Ray Vaughn</option>
+    </optgroup>
+  </select>
+</div>
+<div>
+  <label for="Headline">
+    <span class="text-sm font-medium text-gray-700 dark:text-gray-200"> Headliner </span>
+
+    <select
+      name="Headline"
+      id="Headline"
+      class="mt-0.5 w-full rounded border-gray-300 shadow-sm sm:text-sm dark:border-gray-600 dark:bg-gray-900 dark:text-white"
+    >
+      <option value="">Please select</option>
+
+      <optgroup label="A">
+        <option value="AK">Albert King</option>
+      </optgroup>
+
+      <optgroup label="B">
+        <option value="BBK">B.B King</option>
+        <option value="BG">Buddy Guy</option>
+      </optgroup>
+
+      <optgroup label="E">
+        <option value="EC">Eric Clapton</option>
+      </optgroup>
+
+      <optgroup label="J">
+        <option value="JM">John Mayer</option>
+        <option value="JH">Jimi Hendrix</option>
+      </optgroup>
+
+      <optgroup label="S">
+        <option value="SRV">Stevie Ray Vaughn</option>
+      </optgroup>
+    </select>
+  </label>
+</div>
+<label for="Headline">
+  <span class="text-sm font-medium text-gray-700"> Headliner </span>
+
+  <div class="relative">
+    <input
+      type="text"
+      id="Headline"
+      list="HeadlineList"
+      placeholder="Please select"
+      class="mt-0.5 w-full rounded border-gray-300 pe-8 shadow-sm sm:text-sm [&::-webkit-calendar-picker-indicator]:opacity-0"
+    />
+
+    <span class="absolute inset-y-0 right-0 grid w-8 place-content-center text-gray-700">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </span>
+  </div>
+
+  <datalist name="Headline" id="HeadlineList">
+    <option value="JM">John Mayer</option>
+    <option value="SRV">Stevie Ray Vaughn</option>
+    <option value="JH">Jimi Hendrix</option>
+    <option value="BBK">B.B King</option>
+    <option value="AK">Albert King</option>
+    <option value="BG">Buddy Guy</option>
+    <option value="EC">Eric Clapton</option>
+  </datalist>
+</label>
+<label for="Headline">
+  <span class="text-sm font-medium text-gray-700 dark:text-gray-200"> Headliner </span>
+
+  <div class="relative">
+    <input
+      type="text"
+      id="Headline"
+      list="HeadlineList"
+      placeholder="Please select"
+      class="mt-0.5 w-full rounded border-gray-300 pe-8 shadow-sm sm:text-sm dark:border-gray-600 dark:bg-gray-900 dark:text-white [&::-webkit-calendar-picker-indicator]:opacity-0"
+    />
+
+    <span
+      class="absolute inset-y-0 right-0 grid w-8 place-content-center text-gray-700 dark:text-gray-200"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </span>
+  </div>
+
+  <datalist name="Headline" id="HeadlineList">
+    <option value="JM">John Mayer</option>
+    <option value="SRV">Stevie Ray Vaughn</option>
+    <option value="JH">Jimi Hendrix</option>
+    <option value="BBK">B.B King</option>
+    <option value="AK">Albert King</option>
+    <option value="BG">Buddy Guy</option>
+    <option value="EC">Eric Clapton</option>
+  </datalist>
+</label>   
   </main>
   <footer class="h-10 bg-sky-600">
 
