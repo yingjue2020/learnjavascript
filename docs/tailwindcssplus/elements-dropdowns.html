@@ -8,11 +8,8 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-white font-sans leading-normal tracking-normal">
-  <nav class="h-10 bg-sky-600">
-
-  </nav>
-  <main class="container w-full md:max-w-4xl mx-auto my-4 font-sans border">
+<body class="font-sans leading-normal tracking-normal">
+  
     <div x-data="{ open: false }" class="relative inline-block text-left">
       <div>
         <button @click="open = !open"  type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
@@ -42,14 +39,14 @@
         x-transition:leave="transition ease-in duration-75" 
         x-transition:leave-start="transform opacity-100 scale-100" 
         x-transition:leave-end="transform opacity-0 scale-95" 
-        class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden" 
+        class="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden" 
         role="menu" 
         aria-orientation="vertical" 
         aria-labelledby="menu-button" 
         tabindex="-1">
-        <div class="py-1" role="none">
+        <div class="px-1 py-1" role="none">
           <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+          <a href="#" class="block px-4 py-2 text-sm bg-gray-100 text-gray-900" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
           <form method="POST" action="#" role="none">
@@ -58,10 +55,5 @@
         </div>
       </div>
     </div>
-
-  </main>
-  <footer class="h-10 bg-sky-600">
-
-  </footer>
 </body>
 </html>
