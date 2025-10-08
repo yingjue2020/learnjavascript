@@ -1,0 +1,136 @@
+<!doctype html>
+<html x-data="{ dark: false }" x-init="dark = window.matchMedia('(prefers-color-scheme: dark)').matches">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1" />
+    <title>Template: Blog</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    @theme {
+      --color-clifford: #da373d;
+    }
+    @custom-variant dark (&:where(.dark, .dark *));
+  </style>
+  <script defer src="../js/alpine-3.15.0.min.js"></script>
+</head>
+<body :class="{ 'dark': dark }">
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-gray-900 dark:text-white">My Blog</h1>
+      <nav class="space-x-6">
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">About</a>
+        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <!-- Content Area -->
+    <div class="lg:col-span-3 space-y-8">
+      <!-- Article Card -->
+      <article class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          Blog Post Title
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          This is a short excerpt of the blog post. It gives readers a preview of the article.
+        </p>
+        <a href="#" class="text-primary-600 dark:text-primary-400 font-medium underline hover:no-underline">
+          Read more →
+        </a>
+      </article>
+
+      <article class="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          Another Blog Post
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Another quick summary of the blog post goes here.
+        </p>
+        <a href="#" class="text-primary-600 dark:text-primary-400 font-medium underline hover:no-underline">
+          Read more →
+        </a>
+      </article>
+
+      <ol class="flex -space-x-px justify-center">
+        <li>
+        <a href="#" class="inline-flex justify-center items-center border border-gray-300 size-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10  border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">1</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">2</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">3</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">4</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">5</a></li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10 border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10 border border-gray-300 cursor-not-allowed pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+     </ol>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6">
+      <!-- Search -->
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+        <input type="text" placeholder="Search..." 
+               class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" />
+      </div>
+
+      <!-- Categories -->
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Categories</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Technology</a></li>
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Design</a></li>
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Life</a></li>
+        </ul>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-4">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Recent Posts</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">How to use Tailwind CSS</a></li>
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Building a blog layout</a></li>
+          <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Dark mode with Tailwind</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 py-6 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 dark:text-gray-400 text-sm">
+      © 2025 My Blog. All rights reserved.
+    </div>
+  </footer>
+</div>
+</body>
+</html>
