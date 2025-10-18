@@ -14,60 +14,27 @@
   <script defer src="../js/alpine-3.15.0.min.js"></script>
 </head>
 <body :class="{ 'dark': dark }" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
-  <nav class="fixed top-0 z-50 w-full bg-gray-100 dark:bg-gray-900">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="w-full flex h-10 items-center justify-between">
-        <img src="../images/logo-yingjue.png" alt="YingJue" class="h-6 w-auto" />
-        <button type="button" class="rounded-full p-1 text-gray-400" @click="dark = !dark">
-          <span class="sr-only">Dark Mode Toggle</span>
-          <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
-          </svg>
-          <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-            <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-  <div class="bg-white dark:bg-gray-800 rounded-lg mt-20 px-6 py-8 ring shadow-xl ring-gray-900/5">
-    <div>
-      <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
-        <svg class="h-6 w-6 stroke-white" ...>
-          <!-- ... -->
+<nav class="fixed top-0 z-50 w-full bg-gray-100 dark:bg-gray-900">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="w-full flex h-10 items-center justify-between">
+      <img src="../images/logo-yingjue.png" alt="YingJue" class="h-6 w-auto" />
+      <button type="button" class="rounded-full p-1 text-gray-400" @click="dark = !dark">
+        <span class="sr-only">Dark Mode Toggle</span>
+        <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+          <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
         </svg>
-      </span>
+        <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+          <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+        </svg>
+      </button>
     </div>
-    <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Writes upside-down</h3>
-    <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
-      The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
-    </p>
   </div>
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-md sm:text-center">
-          <h2 class="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Sign up for our newsletter</h2>
-          <p class="mx-auto mb-8 max-w-2xl md:mb-12 sm:text-xl">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
-          <form action="#">
-              <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-                  <div class="relative w-full">
-                      <label for="email" class="hidden mb-2 text-sm font-medium">Email address</label>
-                      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                          <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                            <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-                         </svg>
-                      </div>
-                      <input class="block p-3 pl-9 w-full text-sm" placeholder="Enter your email" type="email" id="email" required="">
-                  </div>
-                  <div>
-                      <button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center">Subscribe</button>
-                  </div>
-              </div>
-              <div class="mx-auto max-w-screen-sm text-sm text-left newsletter-form-footer ">We care about the protection of your data. <a href="#" class="font-medium hover:underline">Read our Privacy Policy</a>.</div>
-          </form>
-      </div>
-  </div>
+</nav>
+  
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+  <!-- Content Area -->
+   <div class="lg:col-span-3 h-40 bg-blue-600"></div>
+   <aside class="h-40 bg-indigo-500"></aside>
 </section>
 <section class="bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -94,6 +61,82 @@
           </form>
       </div>
   </div>
+  <ol class="flex -space-x-px justify-center">
+        <li>
+        <a href="#" class="inline-flex justify-center items-center border border-gray-300 size-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10  border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold text-zinc-800 dark:text-zinc-300 bg-neutral-100 dark:bg-neutral-900" href="#">1</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold text-white bg-indigo-600" href="#">2</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold text-zinc-400 dark:text-zinc-600 bg-neutral-100 dark:bg-neutral-900" href="#">3</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">4</a></li>
+        <li><a class="inline-flex items-center justify-center size-10 border border-gray-300 font-semibold" href="#">5</a></li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10 border border-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#" class="inline-flex items-center justify-center size-10 border border-gray-300 cursor-not-allowed pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        </li>
+     </ol>
 </section>
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-md sm:text-center">
+          <h2 class="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Sign up for our newsletter</h2>
+          <p class="mx-auto mb-8 max-w-2xl md:mb-12 sm:text-xl">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+          <form action="#">
+              <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+                  <div class="relative w-full">
+                      <label for="email" class="hidden mb-2 text-sm font-medium">Email address</label>
+                      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                          <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                            <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                         </svg>
+                      </div>
+                      <input class="block p-3 pl-9 w-full text-sm" placeholder="Enter your email" type="email" id="email" required="">
+                  </div>
+                  <div>
+                      <button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center">Subscribe</button>
+                  </div>
+              </div>
+              <div class="mx-auto max-w-screen-sm text-sm text-left newsletter-form-footer ">We care about the protection of your data. <a href="#" class="font-medium hover:underline">Read our Privacy Policy</a>.</div>
+          </form>
+      </div>
+  </div>
+</section>
+<div class="bg-white dark:bg-gray-800 rounded-lg mt-20 px-6 py-8 ring shadow-xl ring-gray-900/5">
+  <div>
+    <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+      <svg class="h-6 w-6 stroke-white" ...>
+        <!-- ... -->
+      </svg>
+    </span>
+  </div>
+  <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Writes upside-down</h3>
+  <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
+    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+  </p>
+</div>
 </body>
 </html>
